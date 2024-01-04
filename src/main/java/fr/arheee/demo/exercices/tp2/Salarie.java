@@ -25,6 +25,11 @@ public abstract class Salarie {
         this.identite = identite;
     }
 
+    /**
+     * Le Salarie travaille et à recu un salaire
+     * @param heures = heures par défault
+     */
+
     public void travailler(double heures) {
             heures = 151.67;
         double salaireRecu = salaire.payer(heures);
@@ -33,9 +38,19 @@ public abstract class Salarie {
                 " a travaillé " + heures + " heures et a perçu " + salaireRecu + " euros");
     }
 
+    /**
+     * Le salarié à déménager
+     * @param nouvelleAdresse changement d'adresse
+     */
+
     public void demenager(Adresse nouvelleAdresse) {
         identite.setAdresse(nouvelleAdresse);
     }
+
+    /**
+     * Le salarié a reçu une augmentation
+     * @param pourcentageAugmentation = le pourcentage d'augmentation reçu
+     */
 
     public void augmenter(double pourcentageAugmentation) {
         double nouveauTauxHoraire = salaire.getTauxHoraire() * (1 + pourcentageAugmentation / 100);
