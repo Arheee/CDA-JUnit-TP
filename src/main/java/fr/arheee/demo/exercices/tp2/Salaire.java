@@ -20,7 +20,7 @@ public class Salaire {
      * @param heures = heures effectué par le salarié
      * @return la tune $$$$$
      */
-    public double payer(int heures) {
+    public double payer(double heures) {
         if (heures <= 151.67) {
             return tauxHoraire * heures;
         } else {
@@ -33,7 +33,7 @@ public class Salaire {
      * @param heures = les heures effectué par le salarié
      * @return encore plus de tune $$$$$
      */
-    private double calculerSalaireAvecHeuresSupplementaires(int heures) {
+    private double calculerSalaireAvecHeuresSupplementaires(double heures) {
         double heuresNormales = 151.67;
         double heuresSupplementaires = heures - heuresNormales;
         // heures supplémentaires sont payées 25% soit 1.25
