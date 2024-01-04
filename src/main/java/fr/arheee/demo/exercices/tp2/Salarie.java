@@ -57,8 +57,4 @@ public abstract class Salarie {
         salaire.setTauxHoraire(nouveauTauxHoraire);
     }
 
-    @Override
-    public String toString() {
-        return "Salarie " + "salaire=" + salaire + ", identite=" + identite ;
-    }
 }
