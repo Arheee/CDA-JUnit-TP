@@ -24,8 +24,8 @@ class SalaireTest {
     @Test
     @DisplayName("Test pour partir aux maldives avec pleins de tune ")
     void testPayerAvecHeuresSupplementaires() {
-        double resultat = salaire.payer(160);
-        assertEquals(1620.7, resultat, 0.300);
+        double result = salaire.payer(160);
+        assertEquals(1620.7, result, 0.300);
     }
 
 }
