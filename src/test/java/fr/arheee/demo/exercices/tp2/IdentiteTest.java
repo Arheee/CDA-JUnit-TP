@@ -26,7 +26,7 @@ class IdentiteTest {
      * @param rue le pays .. non j'rigole cest la rue
      * @param cp le code postal
      * @param ville la ville
-     * @param pays le pays du cocorico
+     * @param pays le pays
      */
     @ParameterizedTest
     @DisplayName("Test paramétré de changement d'adresse ")
