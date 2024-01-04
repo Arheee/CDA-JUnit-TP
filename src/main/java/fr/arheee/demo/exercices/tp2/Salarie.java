@@ -31,11 +31,11 @@ public abstract class Salarie {
      */
 
     public void travailler(double heures) {
-            heures = 151.67;
+
         double salaireRecu = salaire.payer(heures);
 
         System.out.println("Le salarié " + identite.getNom() + " " + identite.getPrenom() +
-                " a travaillé " + heures + " heures et a perçu " + salaireRecu + " euros");
+                " a travaillé " + heures + " heures et a perçu " + Math.round(salaireRecu) + " euros");
     }
 
     /**
@@ -44,6 +44,7 @@ public abstract class Salarie {
      */
 
     public void demenager(Adresse nouvelleAdresse) {
+
         identite.setAdresse(nouvelleAdresse);
     }
 
