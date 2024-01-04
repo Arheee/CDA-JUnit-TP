@@ -17,20 +17,6 @@ class SalaireTest {
         salaire = new Salaire(10);
     }
 
-    @Test
-    @DisplayName("Test de salaire avec des heures de fonctionnaire")
-    void testPayerAvecHeuresNormales() {
-        double result = salaire.payer(40);
-        assertEquals(400.0, result);
-    }
-    @Test
-    @DisplayName("Test pour partir aux maldives avec pleins de tune ")
-    void testPayerAvecHeuresSupplementaires() {
-        //act
-        double result = salaire.payer(160);
-        //assert
-        assertEquals(1620.7, result, 0.300);
-    }
 
     /**
      * Test avec plusieurs salaires différent

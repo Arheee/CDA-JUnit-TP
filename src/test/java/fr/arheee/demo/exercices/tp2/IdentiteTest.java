@@ -19,14 +19,6 @@ class IdentiteTest {
         identite = new Identite("Dupont","Jean", adresse);
     }
 
-    @Test
-    @DisplayName("Test changement d'adresse")
-    void testChangementAdresse() {
-        Adresse result = new Adresse("456", "rue jean du grand pont", "75001", "Paris", "France");
-        identite.setAdresse(result);
-
-        assertEquals(result, identite.getAdresse());
-    }
 
     /**
      * Test paramétrés pour changer d'adresse
