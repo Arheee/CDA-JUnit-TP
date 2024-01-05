@@ -1,32 +1,37 @@
-## Application de gestion de personnel 
+<h2 p align="center"> Application de gestion de personnel </h2> 
+<h4 p align="center"> ༼ つ ◕_◕ ༽つ </h4>
 
 Cette application de gestion de personnel
 est une application Java conçue pour faciliter 
 la gestion des informations liées aux salariés 
 d'une entreprise.
 
-### Fonctionnalités du projet ✨
+<h3 p align="center"> Fonctionnalités du projet ✨ </h3>
+Pour le moment le projet ne contient qu'un Salarié en CDI.
 
-_A compléter_
+On peut lui attribuer une adresse, une identité, un salaire.
+On peut aussi modifier ses informations personnel
+ou augmenter/baisser son salaire. 
 
-### Structure du projet ✨
+
+<h3 p align="center"> Structure du projet ✨</h3>
 La structure du projet suit les conventions standard
 de Maven qui contient des dossier tels que :
 
 * **src**/ avec **tp2**/ pour le code source de l'application
 
-* **test**/ pour les tests 
-### Dépendances ✨
+* **test**/ pour les tests
+  <h3 p align="center"> Dépendances ✨ </h3>
 
 `Java` pour le code source.
 
-`JUnit 5` pour les tests unitaires.
+`JUnit ` pour les tests unitaires.
 
 `Mockito` pour la création de mocks.
 
 `Maven` pour la gestion des dépendances.
 
-### 🐱‍👓Diagramme de classe ✨
+<h3 p align="center"> 🐱‍👓Diagramme de classe ✨ </h3>
 
 ````
 @startuml
@@ -68,7 +73,15 @@ Identite o-- Adresse
 
 @enduml
 ````
+<h3 p align="center"> Auteurs ✨ </h3>
 
-### Licence ✨
+<p align="center">Justine W. alias Arheee <p>
 
-_@CDA_Arheee ✨💖_
+<h3 p align="center"> Licence ✨ </h3>
+
+<p align="center">fr.arheee </ip>
+
+#### Citation spéciale poulpe ⚆_⚆ 
+>Quand un poulpe est retiré de sa coquille, 
+> une infinité de petites pierres s'attachent à ses bras.
+
