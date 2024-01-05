@@ -34,6 +34,11 @@ public class SalarieCdiTest {
         salarieCdi = new SalarieCdi(salaireMock, identiteMock);
     }
 
+    /**@
+     * Test paramétré methode Travailler de SalarieCdi
+     * @param heuresTravaillees les heures travaillées par le salarié en CDI
+     * @param expectedSalaire le salaire calculé à partir des heures travaillées
+     */
     @ParameterizedTest
     @CsvSource({
             "200, 2000",
@@ -53,21 +58,29 @@ public class SalarieCdiTest {
     @Test
     @DisplayName("Test demenager pour SalarieCdi")
     public void testDemenager() {
-        Adresse nouvelleAdresse = new Adresse("123", "Rue du mock", "75000", "Paris", "France");
-        salarieCdi.demenager(nouvelleAdresse);
-        verify(identiteMock, times(1)).setAdresse(nouvelleAdresse);
+        Adresse adresseMock = mock(Adresse.class);
+        salarieCdi.demenager(adresseMock);
+        verify(identiteMock, times(1)).setAdresse(adresseMock);
     }
 
 
-    @Test
-    @DisplayName("Test augmenter pour SalarieCdi")
-    public void testAugmenter() {
-        double pourcentageAugmentation = 20;
-        when(salaireMock.getTauxHoraire()).thenReturn(10.0);
-        salarieCdi.augmenter(pourcentageAugmentation);
-        verify(salaireMock, times(1)).augmenter(pourcentageAugmentation);
+    /**@
+     * Test de la méthode augmenter pour SalarieCdi
+     * @param pourcentageAugmentation le pourcentage d'augmentation
+     * @param tauxHoraireInitial le taux horaire avant l'augmentation
+     * @param excepted le nouveau taux horaire balèze parce qu'on aime la tune
+     */
 
-        assertEquals(12.0, salarieCdi.getSalaire().getTauxHoraire(), 0.0001);
+    @ParameterizedTest
+    @CsvSource({
+            "20, 10, 12",
+            "20, 20, 24"
+    })
+    @DisplayName("Test augmenter pour SalarieCdi")
+    public void testAugmenter(double pourcentageAugmentation, double tauxHoraireInitial, double excepted) {
+        when(salaireMock.getTauxHoraire()).thenReturn(tauxHoraireInitial);
+        salarieCdi.augmenter(pourcentageAugmentation);
+        verify(salaireMock, times(1)).setTauxHoraire(excepted);
     }
 }
 
