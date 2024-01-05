@@ -79,7 +79,7 @@ Identite o-- Adresse
 
 <h3 p align="center"> Licence ✨ </h3>
 
-<p align="center">fr.arheee </ip>
+<p align="center">fr.arheee </p>
 
 #### Citation spéciale poulpe ⚆_⚆ 
 >Quand un poulpe est retiré de sa coquille, 
