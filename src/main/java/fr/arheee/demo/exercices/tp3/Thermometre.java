@@ -13,8 +13,15 @@ public class Thermometre {
                     closestTemperature = temperature;
                 }
             }
+            if (temperatures.length > 10000) {
+                throw new IllegalArgumentException("Maximum allowed is 10000.");
+            }
 
             return closestTemperature;
         }
+
+
+
+
 
 }
