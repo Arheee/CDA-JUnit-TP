@@ -18,4 +18,11 @@ public class ThermometreTest {
         int result = Thermometre.findClosestTemperature(temperature);
         assertEquals(1, result);
     }
+
+    @Test
+    public void test_thermometre_return_positive_temperature_if_negative_temperature_equal(){
+        int[] temperature = new int[]{-2, -8, -4, 2};
+        int result = Thermometre.findClosestTemperature(temperature);
+        assertEquals(2, result);
+    }
 }
