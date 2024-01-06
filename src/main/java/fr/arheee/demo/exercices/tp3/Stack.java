@@ -2,17 +2,22 @@ package fr.arheee.demo.exercices.tp3;
 
 public class Stack {
     private int[] elements;
-
+    private int size;
 
     public Stack() {
         this.elements = new int[10];
+        this.size = 0;
     }
 
     public void push(int element) {
-         elements = new int[1];
+        elements[size++] = element;
+    }
+
+    public void pop(){
+        size --;
     }
 
     public boolean isEmpty() {
-        return false;
+        return size == 0;
     }
 }
