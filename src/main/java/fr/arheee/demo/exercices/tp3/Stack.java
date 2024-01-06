@@ -17,6 +17,10 @@ public class Stack {
         size --;
     }
 
+    public int peek() {
+        return elements[size - 1];
+    }
+
     public boolean isEmpty() {
         return size == 0;
     }
