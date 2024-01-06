@@ -34,4 +34,14 @@ public class StackTest {
         assertEquals(3, result);
         assertFalse(stack.isEmpty());
     }
+
+    @Test
+    public void test_is_full() {
+        for (int i = 0; i < 9; i++) {
+            stack.push(i);
+        }
+        assertFalse(stack.isFull());
+        stack.push(9);
+        assertTrue(stack.isFull());
+    }
 }
