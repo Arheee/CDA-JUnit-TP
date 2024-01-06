@@ -9,6 +9,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ThermometreTest {
 
+    /**
+     * Test paramétré utilisant le stream streamTemperatureThermometre.
+     * Vérifie si la méthode findClosestTemperature renvoie la température attendue.
+     * @param temperatures les différentes temperatures.
+     * @param expected La température attendue la plus proche de zéro.
+     */
 
     @ParameterizedTest
     @MethodSource("streamTemperatureThermometre")
@@ -26,6 +32,7 @@ public class ThermometreTest {
                 Arguments.of(new int[]{-2, -8, 4, 5}, -2)
         );
     }
+
 
     @Test
     @DisplayName("Test plus de 10000 mesures, on lève une exception ")
