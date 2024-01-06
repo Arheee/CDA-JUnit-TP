@@ -9,12 +9,17 @@ public class Stack {
         this.size = 0;
     }
 
-    public void push(int element) {
-        elements[size++] = element;
-    }
+    public int push(int element) {
 
-    public void pop(){
-        size --;
+        if (size < 10)
+            elements[size++] = element;
+        return element;
+    }
+    public int pop(int element) {
+        if (size > 0) {
+            size--;
+        }
+        return element;
     }
 
     public int peek() {
@@ -24,6 +29,7 @@ public class Stack {
     public boolean isEmpty() {
         return size == 0;
     }
+
     public boolean isFull() {
         return size == elements.length;
     }
